@@ -1,69 +1,42 @@
 import Image from "next/image";
+import PageHeader from "@/components/PageHeader";
+
+const skillGroups = [
+  { number: "01", label: "Frontend", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind"] },
+  { number: "02", label: "Backend", skills: ["Node.js", "Express.js", "REST APIs", "Axios", "Fetch API"] },
+  { number: "03", label: "Data & tools", skills: ["MongoDB", "Mongoose", "Git", "GitHub", "Postman", "Vite"] },
+];
+
+function ArrowUpRight() {
+  return <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" className="icon icon-arrow"><path d="M3.5 12.5 12.5 3.5M5 3.5h7.5V11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <PageHeader />
+
+      <section id="top" className="hero shell">
+        <div className="hero-copy">
+          <p className="eyebrow"><span className="eyebrow-line" /> Full-stack engineer · Lagos, Nigeria</p>
+          <h1>I build digital <span className="display-accent">experiences</span><br />that feel inevitable.</h1>
+          <p className="hero-intro">I&apos;m Jamiu Aliyu Adekunle — a full-stack engineer crafting thoughtful, responsive products across the frontend and backend.</p>
+          <div className="hero-actions"><a className="button button-primary" href="#work">Explore my work <ArrowUpRight /></a><a className="text-link" href="mailto:jamiualiyuolanrewaju@gmail.com">Let&apos;s talk <span>↗</span></a></div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-visual" aria-label="Abstract developer profile graphic">
+          <div className="visual-orbit orbit-one" /><div className="visual-orbit orbit-two" /><div className="visual-grid" />
+          <div className="visual-card"><div className="avatar-placeholder" style={{ position: "relative" }}><Image src="/profile.jpg" alt="Jamiu Aliyu Adekunle" fill priority sizes="260px" /></div><div className="card-name">Jamiu Aliyu<br /><em>full-stack engineer</em></div></div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="ticker" aria-label="Areas of interest"><div className="ticker-track"><span>Frontend development</span><i>✦</i><span>Full-stack web apps</span><i>✦</i><span>API development</span><i>✦</i><span>AI-powered solutions</span><i>✦</i><span>Frontend development</span><i>✦</i><span>Full-stack web apps</span><i>✦</i><span>API development</span><i>✦</i><span>AI-powered solutions</span></div></section>
+
+      <section id="work" className="section shell work-section"><div className="section-heading"><p className="eyebrow"><span className="eyebrow-line" /> Featured project</p><span className="section-index">01 / 03</span></div><div className="work-intro"><h2>Made with intent.<br /><span>Built to matter.</span></h2><p>A living portfolio for thoughtful interfaces, full-stack experiments, and the work still taking shape.</p></div><article className="project-card"><div className="project-card-main"><div className="project-card-top"><span className="project-number">PROJECT 001 / 2026</span><span className="project-status"><span className="status-dot" /> Live build</span></div><h3>Cisse&apos;s<br /><em>portfolio.</em></h3><p>A responsive software developer portfolio built to present work clearly today and grow into an AI-assisted project publishing platform tomorrow.</p><div className="project-tags"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span><span>Responsive UI</span></div></div><div className="project-card-side"><a className="circle-link" href="https://github.com/cisseally99" target="_blank" rel="noreferrer" aria-label="View Cisse's portfolio on GitHub"><ArrowUpRight /></a><span>Frontend · Full-stack<br />Personal platform</span></div></article></section>
+
+      <section id="about" className="section shell about-section"><div className="section-heading"><p className="eyebrow"><span className="eyebrow-line" /> What I bring</p><span className="section-index">02 / 03</span></div><div className="about-grid"><h2>Less noise.<br /><span>More signal.</span></h2><div><p className="large-copy">I care about the space between an idea and the person using it. That means clean interfaces, resilient systems, and enough curiosity to keep asking better questions.</p><p className="muted-copy">Currently growing at the intersection of frontend craft, full-stack thinking, and AI-powered software.</p></div></div><div className="skills-grid">{skillGroups.map((group) => <div className="skill-group" key={group.number}><span className="skill-number">{group.number}</span><h3>{group.label}</h3><div className="skill-list">{group.skills.map((skill) => <span key={skill}>{skill}</span>)}</div></div>)}</div></section>
+
+      <section id="contact" className="contact-section"><div className="shell contact-inner"><div><p className="eyebrow"><span className="eyebrow-line" /> Have an idea?</p><h2>Let&apos;s make it<br /><span>real.</span></h2></div><a className="button button-light" href="mailto:jamiualiyuolanrewaju@gmail.com">Start a conversation <ArrowUpRight /></a></div></section>
+      <footer className="site-footer shell"><span>© 2026 Jamiu Aliyu Adekunle</span><div><a href="https://github.com/cisseally99" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/aliyu-jamiu-1231a4297" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:jamiualiyuolanrewaju@gmail.com">Email ↗</a></div></footer>
+    </main>
   );
 }
