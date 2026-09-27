@@ -5,12 +5,13 @@ import MoreMenu from "@/components/MoreMenu";
 export default function PageHeader() {
   return (
     <nav className="site-nav shell" aria-label="Main navigation">
+      <Link className="wordmark" href="/" aria-label="Cisse home">CISSE<span>.</span></Link>
       <div className="nav-links">
         <Link href="/">Home</Link>
         <Link href="/projects">Projects</Link>
         <MoreMenu />
       </div>
-      <div className="nav-actions"><ThemeToggle /></div>
+      <div className="nav-actions"><span className="nav-availability"><span className="status-dot" /> Available for work</span><ThemeToggle /></div>
     </nav>
   );
 }
