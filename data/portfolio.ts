@@ -19,6 +19,11 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive UI"],
     github: "https://github.com/cisseally99",
     status: "Live build",
+    role: "Product design · Frontend · Full-stack",
+    overview: "A personal platform designed to make a developer's work feel clear, credible, and easy to explore.",
+    problem: "A portfolio should do more than list technologies. It needs to create enough context for a visitor to understand how the work was thought through and how to start a conversation.",
+    solution: "I shaped the experience as an editorial system: a focused landing page, structured project routes, a reusable content model, and a direct contact flow that can grow with the portfolio.",
+    highlights: ["Designed a responsive visual system from scratch", "Built reusable routes for projects, writing, and experience", "Added a validated contact API with Resend integration", "Connected the GitHub repository to automatic Vercel deployments"],
   },
 ];
 

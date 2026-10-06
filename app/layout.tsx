@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cisse's portfolio — Software Developer",
-  description: "Portfolio of Jamiu Aliyu Adekunle, a junior software developer building thoughtful frontend and full-stack experiences.",
+  description: "Portfolio of Jamiu Aliyu Adekunle, a full-stack engineer building thoughtful frontend and web experiences.",
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
