@@ -32,7 +32,7 @@ export default function Home() {
           <div className="hero-proof"><span>01</span><p>Design-minded<br />engineering</p><span>✦</span><p>Built for<br />the real world</p></div>
         </div>
         <div className="hero-visual" aria-label="Abstract developer profile graphic">
-          <div className="visual-card"><div className="avatar-placeholder" style={{ position: "relative" }}><Image src="/mascot.png" alt="Illustrated mascot of Jamiu Aliyu Adekunle" fill priority sizes="260px" /></div><div className="card-name">Jamiu Aliyu<br /><em>full-stack engineer</em></div></div>
+          <div className="visual-card"><div className="avatar-placeholder" style={{ position: "relative" }}><Image src="/profile.jpg" alt="Jamiu Aliyu Adekunle" fill priority sizes="260px" /></div><div className="card-name">Jamiu Aliyu<br /><em>full-stack engineer</em></div></div>
         </div>
       </section>
 
