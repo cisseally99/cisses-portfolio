@@ -49,11 +49,29 @@ export const projects = [
 
 export const articles = [
   {
-    slug: "building-an-ai-assisted-portfolio",
-    title: "Building an AI-assisted portfolio",
-    excerpt: "What a careful, approval-first workflow could look like for keeping a developer portfolio current.",
-    date: "Coming soon",
-    tags: ["AI", "Architecture", "Portfolio"],
+    slug: "building-manpost",
+    title: "Building Manpost: making API testing feel approachable",
+    excerpt: "The product decisions behind a focused API workspace for composing requests, understanding responses, and saving useful work.",
+    date: "October 2026",
+    tags: ["Product design", "Next.js", "API tooling"],
+    sections: [
+      {
+        heading: "The idea",
+        body: "Manpost started with a simple observation: API testing can feel unnecessarily intimidating when request configuration, server responses, and debugging tools are scattered across different places. The goal was to create a calmer workspace where a developer or learner could compose a request, send it, and understand the result without fighting the interface.",
+      },
+      {
+        heading: "Designing the workflow",
+        body: "The experience is organized around the request itself. Method, URL, query parameters, headers, and JSON body controls sit close to the response inspector, so the cause and effect of each request stays visible. Supporting saved requests, collections, and history turns one-off testing into a reusable workflow.",
+      },
+      {
+        heading: "Engineering with guardrails",
+        body: "Manpost uses a full-stack architecture with Next.js, TypeScript, PostgreSQL, Prisma, and Tailwind CSS. Outbound requests are handled through a controlled server-side flow with public-network checks and rate limits, helping keep the tool useful while reducing the risk of unsafe or abusive requests.",
+      },
+      {
+        heading: "What I learned",
+        body: "The strongest tools do not expose every capability at once. They guide people through the important path, make feedback immediate, and add power through progressive detail. That principle shaped Manpost: keep the first request simple, then make the deeper information available when it becomes useful.",
+      },
+    ],
   },
 ];
 
